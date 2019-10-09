@@ -21,10 +21,9 @@ void BicgstabL::accumulate(ll size, realVector &x, realNum a, const realVector &
 
 // // Ax = b -> result vector X  size: matSize
 int BicgstabL::solve(const int L, const ll matSize, int maxIters, const double tolerance,
-                     Eigen::SparseMatrix<realNum, storageOption> &sparseMatrixA,
+                     Eigen::SparseMatrix<realNum, Eigen::RowMajor> &sparseMatrixA,
                      const realVector& vectorB, realVector &vectorX)
 {
-    cout << "\n\nBicgstab 2\n\n";
     int errCode = 0;
     //int k = -L;
 
